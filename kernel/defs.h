@@ -139,6 +139,9 @@ int             fetchstr(uint64, char*, int);
 int             fetchaddr(uint64, uint64*);
 void            syscall();
 
+// sysproc.c
+pte_t *walk(pagetable_t pagetable, uint64 va, int alloc);
+
 // trap.c
 extern uint     ticks;
 void            trapinit(void);
